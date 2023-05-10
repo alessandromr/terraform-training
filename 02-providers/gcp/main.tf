@@ -1,4 +1,4 @@
 provider "google" {
-  project     = "my-project-id"
-  region      = "us-central1"
+  project     = "tf-training-386313"
+  region      = "europe-west12"
 }

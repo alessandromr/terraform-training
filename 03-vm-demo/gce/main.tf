@@ -8,9 +8,9 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("<NAME>.json")
+  credentials = file("/Users/alessandromarino/.gcp/tf-training-386313-669332f07266.json")
 
-  project = "<PROJECT_ID>"
-  region  = "us-central1"
-  zone    = "us-central1-c"
+  project = "tf-training-386313"
+  region  = "europe-west12"
+  zone    = "europe-west12-a"
 }
