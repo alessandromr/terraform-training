@@ -14,11 +14,11 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "web1" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.nano"
+  instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld TF-Demo"
+    Name = "HelloWorld"
   }
 }
