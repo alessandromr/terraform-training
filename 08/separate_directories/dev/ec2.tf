@@ -1,3 +1,6 @@
+locals {
+  env = "dev"
+}
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -19,15 +22,6 @@ resource "aws_instance" "web1" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld"
-  }
-
-  provisioner "local-exec" {
-    command = "echo \"The server's IP address is ${self.private_ip}\""
-  }
-
-  provisioner "local-exec" {
-    when    = destroy
-    command = "echo 'Destroy-time provisioner'"
+    Name = "demo-instance-${local.env}"
   }
 }
