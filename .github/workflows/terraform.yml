@@ -58,7 +58,7 @@ jobs:
     - name: Terraform Plan
       run: |
         cd 09-demo/gitops/app
-        terraform plan -input=false
+        TF_LOG=debug terraform plan -input=false
         terraform apply -auto-approve 
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
