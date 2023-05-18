@@ -1,0 +1,1 @@
+windows_base_ami = "ami-0a0141f50e3c3f1de"
