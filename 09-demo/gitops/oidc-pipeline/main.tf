@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket = "terraform-demo-bucket-2023-05-11"
-    key    = "demo/live-demo-module.json"
+    key    = "demo/gitops-demo/oidc.json"
     region = "eu-west-1"
   }
 }
