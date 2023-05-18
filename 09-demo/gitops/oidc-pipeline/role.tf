@@ -35,9 +35,7 @@ resource "aws_iam_role_policy" "github-demo" {
         {
             "Effect": "Allow",
             "Action": [
-                "iam:*",
-                "s3:*",
-                "cloudfront:*"
+                "*"
             ],
             "Resource": "*"
         }
