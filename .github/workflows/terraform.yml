@@ -28,9 +28,9 @@ jobs:
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: ${{ env.AWS_ROLE }}
+        role-to-assume: ${{ vars.AWS_ROLE }}
         role-session-name: github-terraform-training-repo
-        aws-region: ${{ env.AWS_REGION }}
+        aws-region: ${{ vars.AWS_REGION }}
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
