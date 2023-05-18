@@ -41,7 +41,10 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: cd 09-demo/gitops/app && terraform init
+      run: |
+        cd 09-demo/gitops/app
+        ls -la
+        terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
